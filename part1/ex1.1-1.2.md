@@ -1,0 +1,15 @@
+# Exercise 1.1 - Getting Started
+
+Start 3 containers and stop 2 of them. Use `docker ps -a` to check see all container status.
+
+## Solution
+
+![1.1 - Getting Started](./img/e1.1.PNG)
+
+# Exercise 1.2 - Cleanup
+
+Remove all images and containers from ex 1.1. Use `docker ps -as` and `docker images` to reveal what is in docker daemon.
+
+## Solution
+
+![1.2 - Cleanu ](./img/e1.2.PNG)
