@@ -6,3 +6,4 @@
 
 1. Images and Containers (ex 1.1 ~ 1.2)
 2. Running and Stopping Containers (ex 1.3 ~ 1.4)
+3. In Depth Dive to Images (ex 1.5 ~ 1.6)
