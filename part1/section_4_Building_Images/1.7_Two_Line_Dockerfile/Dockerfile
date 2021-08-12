@@ -1,5 +1,5 @@
 # Start from alpine image
 FROM devopsdockeruh/simple-web-service:alpine
 
-# Run the command
+# When running image, use "server" argument along 
 CMD server
