@@ -2,4 +2,4 @@
 FROM devopsdockeruh/simple-web-service:alpine
 
 # Run the command
-RUN hello
+CMD server
