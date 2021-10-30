@@ -1,6 +1,7 @@
 # DevOps with Docker Part 1
 
 ## [Introduction to Docker and DevOps](https://devopswithdocker.com/part1/)
+
 ---
 
 ### Table of Contents
@@ -10,5 +11,6 @@
 3. In Depth Dive to Images (ex 1.5 ~ 1.6)
 4. Building Images (ex 1.7 ~ 1.8)
 5. Volume: Bind Mount (ex 1.9)
+6. Allowing external connections into containers (ex 1.10)
 
-__Note:__ Some directory may contain exercises for multiple sections (e.g. ```section_1-3```).
+**Note:** Some directory may contain exercises for multiple sections (e.g. `section_1-3`).

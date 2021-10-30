@@ -2,6 +2,8 @@
 
 ## Exercise 1.9
 
+Use `devopsdockeruh/simple-web-service` to bind mount your local machine and docker container.
+
 --
 
 ## Solution
