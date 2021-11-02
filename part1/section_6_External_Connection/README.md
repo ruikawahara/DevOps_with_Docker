@@ -20,8 +20,13 @@ docker run -p 80:8080 web-server
 
 _Note_: Since default port for `localhost` is 80, use that as your host port. If you have different port setup, use that instead.
 
+---
+
 ## Output
 Terminal should look like this:
-![1.10 - Terminal Image](../img/e1.10.1.PNG)<br />
+![1.10 - Terminal Image](../img/e1.10.1.PNG)
+
+
 Browser should look like this:
+
 ![1.10 - Browser Image](../img/e1.10.2.PNG)

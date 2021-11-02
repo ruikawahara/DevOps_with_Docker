@@ -4,7 +4,7 @@
 
 Use `devopsdockeruh/simple-web-service` to bind mount your local machine and docker container.
 
---
+---
 
 ## Solution
 
@@ -26,6 +26,8 @@ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-
 
 # When done, use ctrl + c to exit
 ```
+
+--- 
 
 ## Output
 
