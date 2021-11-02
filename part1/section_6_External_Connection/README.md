@@ -22,8 +22,6 @@ _Note_: Since default port for `localhost` is 80, use that as your host port. If
 
 ## Output
 Terminal should look like this:
-![1.10 - Terminal Image](../img/e1.10.1.PNG)
-
-<br>
+![1.10 - Terminal Image](../img/e1.10.1.PNG)<br />
 Browser should look like this:
 ![1.10 - Browser Image](../img/e1.10.2.PNG)
