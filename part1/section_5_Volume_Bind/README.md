@@ -1,6 +1,6 @@
 # 5. Volume: bind mount
 
-## Exercise 1.9
+## Exercise 1.9 - Volumes
 
 Use `devopsdockeruh/simple-web-service` to bind mount your local machine and docker container.
 
