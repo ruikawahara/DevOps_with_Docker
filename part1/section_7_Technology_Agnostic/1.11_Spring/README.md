@@ -12,6 +12,7 @@ Tips:
 
 ## Solution
 
+See Dockerfile in this directory.
 
 ---
 
