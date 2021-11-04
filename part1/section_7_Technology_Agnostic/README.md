@@ -31,9 +31,9 @@ Once you run the image, go to `localhost:<host_port>` to see result.
 ## Output
 
 Terminal Output:
-![Terminal Out](../../img/e1.11.1.PNG)
+![Terminal Out](../img/e1.11.1.PNG)
 
 
 Browser Output:
 
-![Browser Out](../../img/e1.11.2.PNG)
+![Browser Out](../img/e1.11.2.PNG)
