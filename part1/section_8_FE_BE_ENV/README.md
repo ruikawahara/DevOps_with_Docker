@@ -8,9 +8,23 @@ Given [example-frontend](https://github.com/docker-hy/material-applications/tree
 
 ## Solution
 
-See `Dockerfile` located in `example-frontend`
+Before making `Dockerfile`, make sure you are in `example-frontend` directory that you just cloned.
+
+Using `Dockerfile` located in `example-frontend`, run following commands:
+
+```docker
+# build Dockerfile
+docker build . -t frontend
+
+# run dockerfile
+docker run -p 5000:5000 frontend
+```
+
+See `Dockerfile` located in `example-frontend` directory for contents of dockerfile.
 
 ---
+
+## Output
 
 --- 
 
@@ -18,7 +32,11 @@ See `Dockerfile` located in `example-frontend`
 
 ---
 
+## Solution
+
 ---
+
+## Output
 
 ---
 
@@ -26,4 +44,8 @@ See `Dockerfile` located in `example-frontend`
 
 ---
 
+## Solution
+
 ---
+
+## Output
