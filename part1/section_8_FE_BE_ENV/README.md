@@ -20,7 +20,7 @@ docker build . -t frontend
 docker run -p 5000:5000 frontend
 ```
 
-See `Dockerfile` located in `example-frontend` directory for contents of dockerfile.
+See `Dockerfile` located in `fe_dockerfile` directory for more detail.
 
 ---
 
