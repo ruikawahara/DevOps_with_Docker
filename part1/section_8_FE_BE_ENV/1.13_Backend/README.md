@@ -25,3 +25,7 @@ You should see your result in [http://localhost:8080/ping](http://localhost:8080
 ---
 
 ## Output
+
+Your browser should look something like this:
+
+![1.13 - backend](../../img/e1.13.PNG)

@@ -23,3 +23,7 @@ You should see your result in [http://localhost:5000/](http://localhost:5000/) w
 ---
 
 ## Output
+
+Your browser should look something like this:
+
+![1.12 - Frontend](../../img/e1.12.PNG)
