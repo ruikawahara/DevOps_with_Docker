@@ -14,5 +14,6 @@
 6. Allowing external connections into containers (ex 1.10)
 7. Technology Agnostic (ex 1.11)
 8. Mandatory Projects (ex 1.12 ~ 1.14)
+9. Publishing Projects (ex 1.15 ~ 1.16)
 
 **Note:** Some directory may contain exercises for multiple sections (e.g. `section_1-3`).
