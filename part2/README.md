@@ -4,7 +4,7 @@
 
 ### Overview
 
-In this part, we will learn how to use docker-compose and relevant such as docker network.
+In this part, we will learn how to use docker-compose and relevant topics such as docker network.
 
 ---
 
