@@ -14,8 +14,8 @@ COPY . .
 # Build binary
 RUN go build
 
-# Set environment variable to your localhost
-ENV REQUEST_ORIGIN=http://127.0.0.1
+# Set environment variable to your localhost. Add port for 1.14
+ENV REQUEST_ORIGIN=http://localhost:5000
 
 # Execute the file?
 CMD ["./server"]
