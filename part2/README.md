@@ -10,4 +10,4 @@ In this part, we will learn how to use docker-compose and relevant topics such a
 
 ### Table of Contents
 
-1. Migrating to docker-compose.yml (ex 2.1)
+1. Migrating to docker-compose (ex 2.1)

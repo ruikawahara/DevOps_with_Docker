@@ -24,6 +24,12 @@ docker-compose up
 ```
 For specific implementation of `docker-compose.yml`, refer to `yaml` file that is in this directory.
 
+__Notes__: 
+* Your directory should not start with a number as it can cause an issue with daemon. 
+* Additionally, you may need to use `docker-compose down` to clean container in some scenario. This is typically the case if you ran `up` command before.
+
 ---
 
 ## Output
+
+See `text.log` file located in this directory.
