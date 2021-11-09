@@ -2,5 +2,21 @@ version: '3.5'
 
 services:
     frontend:
+      image: frontend-example/ruikawahara
+      build: ./example-frontend
+      ports:
+        - 5000:5000
+      environment:
+        - REACT_APP_BACKEND_URL=http://127.0.0.1:8080
+      container_name: frontend
+      command: serve -s -l 5000 build
 
     backend:
+      image: backend-example/ruikawahara
+      build: ./example-backend
+      ports:
+        - 8080:8080
+      environment:
+        - REQUEST_ORIGIN=http://localhost:5000
+      container_name: backend
+      command: ./server
