@@ -8,6 +8,7 @@ services:
         - 5000:5000
       environment:
         - REACT_APP_BACKEND_URL=http://127.0.0.1:8080
+        - REDIS_HOST=6379
       container_name: frontend
       command: serve -s -l 5000 build
 
@@ -20,3 +21,11 @@ services:
         - REQUEST_ORIGIN=http://localhost:5000
       container_name: backend
       command: ./server
+
+    redis:
+      image: redis
+      build: ./
+      ports:
+        - 6379:6379
+      container_name: redis
+      command: curl /ping?redis=true
