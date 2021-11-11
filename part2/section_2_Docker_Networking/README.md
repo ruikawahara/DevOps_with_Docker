@@ -10,9 +10,13 @@ Additionally, redis container needs to cache information for the backend.
 
 ## Solution
 
-To run correctly, please refer to `README.md` located in ex 2.3. Since we may reuse `example-frontend` and `example-backend` in a future, those two directories are now located above (i.e. placed along with the `README.md` that has the table of contents for part 2).
+To run correctly, copy the `Dockerfile` located in `dockerfile_new_backend` in `example-backend`, which is located above this directory. Rest of the setup is similar to ex 2.3 except that the `example` directories are located above of this directory.
 
+Once everything is set up, run `docker-compose up` to start the program. You should see your result in [localhost:5000](localhost:5000)
 
 ---
 
 ## Output
+
+Your browser should look like this:
+![2.4 - Docker Network](../img/e2.4.PNG)
