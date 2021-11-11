@@ -12,3 +12,4 @@ In this part, we will learn how to use docker-compose and relevant topics such a
 
 1. Migrating to docker-compose (ex 2.1 ~ 2.3)
 2. Docker Networking (ex 2.4)
+3. Scaling (ex 2.5)
