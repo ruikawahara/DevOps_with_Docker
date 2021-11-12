@@ -20,6 +20,20 @@ docker-compose up
 docker-compose down
 ```
 
+When creating database, you may need to clean the volumes that were generated. You can use following commands to do so:
+
+```docker
+# check if you have volume(s)
+docker volume ls
+
+# remove volume
+docker volume rm <volume_name>
+
+# clean entirely
+docker volume prune
+```
+
+
 For specific implementation, refer to `docker-compose.yml` located in this directory.
 
 *Misc. Note* - `Dockerfile` for `redis` is not necessary. It's also necessary for ex 2.4 as well.
