@@ -1,4 +1,3 @@
-
 # 3. Scaling
 
 ## Exercise 2.5 - Scale the container
