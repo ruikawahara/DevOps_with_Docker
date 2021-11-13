@@ -23,6 +23,8 @@ services:
       - REDIS_HOST=redis
       - POSTGRES_HOST=db
       - POSTGRES_PASSWORD=bird
+    # volumes:
+    #   - ./database:/var/lib/postgresql/data
     container_name: backend
     command: ./server
 
@@ -41,12 +43,15 @@ services:
     restart: unless-stopped 
     environment:
       - POSTGRES_PASSWORD=bird
+      - PGDATA=/message
+      # - PGDATA=/var/lib/postgresql/data/message
     volumes:
-      - database:/var/lib/postgresql/data
+      # - database:/var/lib/postgresql/data
+      - ./database:/message
     container_name: db_backend
     depends_on:
       - backend
 
 volumes:
-  database:
+  database: 
   cache:
