@@ -20,6 +20,25 @@ Check your result at [http://localhost](http://localhost).
 
 ## Solution
 
+For your convenience, this directory also has `Makefile` you can use.
+
+To start the `docker-compose`, run the following command:
+```Makefile
+# this will run docker-compose up
+make
+```
+
+Once everything starts up, go to [http://localhost](http://localhost) to test 2.8. Do note that all the other buttons from previous exercises will break due to proxy setting. We will fix this in later exercise.
+
+When you're done, run following command to clean:
+```Makefile
+# this will run docker-compose down and docker volume prune
+make clean
+```
+
 ---
 
 ## Output
+
+Your browser should look like this:
+![2.8 - proxy](../../img/e2.8.PNG)
