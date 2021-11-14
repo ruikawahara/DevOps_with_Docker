@@ -23,8 +23,6 @@ services:
       - REDIS_HOST=redis
       - POSTGRES_HOST=db
       - POSTGRES_PASSWORD=bird
-    # volumes:
-    #   - ./database:/var/lib/postgresql/data
     container_name: backend
     command: ./server
 
@@ -33,25 +31,18 @@ services:
     ports:
       - 6379:6379
     volumes:
-      - cache:/data 
+      - ~/cache:/data
     container_name: redis
     depends_on:
-      - db_backend
+      - db
 
   db:
     image: postgres:13.2-alpine
     restart: unless-stopped 
     environment:
       - POSTGRES_PASSWORD=bird
-      - PGDATA=/message
-      # - PGDATA=/var/lib/postgresql/data/message
     volumes:
-      # - database:/var/lib/postgresql/data
-      - ./database:/message
+      - ~/database:/var/lib/postgresql/data
     container_name: db_backend
     depends_on:
       - backend
-
-volumes:
-  database: 
-  cache:
