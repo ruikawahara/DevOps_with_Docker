@@ -11,14 +11,15 @@ WORKDIR /usr/src/app
 # Make sure you are in correct directory.
 COPY . .
 
-# Build binary
-RUN go build
-
 # Set environment variable to your localhost. Add port for 1.14
-ENV REQUEST_ORIGIN=http://localhost:5000
+# ENV REQUEST_ORIGIN=http://localhost:5000
+ENV REQUEST_ORIGIN=http://localhost
 
 # Set environment variable for redis. (2.4) 
 ENV REDIS_HOST=redis
+
+# Build binary
+RUN go build
 
 # Execute the file?
 CMD ["./server"]
