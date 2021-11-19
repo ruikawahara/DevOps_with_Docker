@@ -2,7 +2,9 @@
 
 ## [Docker in Production](https://devopswithdocker.com/part3/)
 
-### Overview
+---
+
+## Overview
 
 This part will introduce users to a production-ready practices.
 
@@ -20,6 +22,9 @@ You will learn some useful techniques, such as:
 
 ---
 
-### Table of Contents
+## Table of Contents
 
 1. Deployment Pipeline (ex 3.1~3.2)
+2. Using Non-Root User (ex 3.3)
+3. Optimizing Dockerfile (ex 3.4~3.7)
+4. Multi-Host Environment Options (ex 3.8)
