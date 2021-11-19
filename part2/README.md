@@ -14,6 +14,7 @@ In this part, we will learn how to use docker-compose and relevant topics such a
 2. Docker Networking (ex 2.4)
 3. Scaling (ex 2.5)
 4. Larger Application with Volumes (ex 2.6 ~ 2.10)
+5. Containers in development (ex 2.11)
 
 ### Important Notes
 When you are pulling this repository, some directories (e.g. `example-frontend`, `example-backend`, etc) may not have Dockerfile that it needs to due .gitignore. I've prepared a Dockerfile necessary for those directories in here. 
