@@ -18,6 +18,7 @@ You will learn some useful techniques, such as:
     - ... and some other techniques
 - Deployment Pipeline
     - Automatic Deployment
+    - Intro to CI/CD using GitHub & GitHub Action
 
 
 ---
