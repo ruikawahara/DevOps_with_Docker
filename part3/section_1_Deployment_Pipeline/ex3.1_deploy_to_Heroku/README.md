@@ -1,4 +1,3 @@
-
 # 1. Deployment Pipeline
 
 ## Exercise 3.1 - Deploy pipeline to Heroku
