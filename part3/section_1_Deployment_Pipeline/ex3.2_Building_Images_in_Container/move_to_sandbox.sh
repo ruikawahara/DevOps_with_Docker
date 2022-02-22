@@ -1,1 +1,0 @@
-cp ./build_service.py /mnt/c/Users/Rui/Desktop/learn/tutorial_docker/p3/sandbox
