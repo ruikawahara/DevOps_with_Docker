@@ -6,7 +6,6 @@ read -r repoURL
 
 # Example repository
 # https - https://github.com/ruikawahara/docker-hy.github.io.git
-# ssh - git@github.com:ruikawahara/docker-hy.github.io.git
 # directory: docker-hy.github.io/
 
 # Store repo name and its path to a variable.
@@ -25,7 +24,7 @@ build () {
     cd $path
     printf 'Please enter build arguments. If none, leave it empty and it will build itself: '
     read -r buildArgs
-    docker build -t ex3.2 $buildArgs .
+    ../docker build -t ex3.2 $buildArgs .
     cd ..
 }
 
@@ -34,17 +33,17 @@ run () {
     # for 'docker-hy.github.io', you will need "-p 80:80" args
     printf 'Please enter run arguments. If none, leave it empty and it will run: '
     read -r runArgs
-    docker run $runArgs ex3.2
+    ./docker run $runArgs ex3.2
 }
 
 publish () {
     echo "Please login first: "
-    docker login
+    ./docker login
 
     echo "Enter your Docker Hub username: "
     read -r username
-    docker tag ex3.2:latest $username/ex3.2:latest
-    docker push $username/ex3.2:latest
+    ./docker tag ex3.2:latest $username/ex3.2:latest
+    ./docker push $username/ex3.2:latest
 }
 
 # cloned repo removal
@@ -71,3 +70,7 @@ publish
 
 # Uncomment below if you want to remove cloned repo
 # clean
+
+# NB: You will need "./" before docker 
+# since docker cli needs to be executed each time it uses "docker" command.
+# Remove "./" if you are using this elsewhere.
