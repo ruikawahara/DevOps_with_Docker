@@ -4,10 +4,6 @@
 printf 'Please enter URL for GitHub repo with valid Dockerfile: '
 read -r repoURL
 
-# Example repository
-# https - https://github.com/ruikawahara/docker-hy.github.io.git
-# directory: docker-hy.github.io/
-
 # Store repo name and its path to a variable.
 urlLast=${repoURL##*/}
 repoName=${urlLast::-4}
@@ -37,11 +33,10 @@ run () {
 }
 
 publish () {
-    echo "Please login first: "
-    ./docker login
-
-    echo "Enter your Docker Hub username: "
+    printf "Enter your username: "
     read -r username
+
+    ./docker login -u $username
     ./docker tag ex3.2:latest $username/ex3.2:latest
     ./docker push $username/ex3.2:latest
 }

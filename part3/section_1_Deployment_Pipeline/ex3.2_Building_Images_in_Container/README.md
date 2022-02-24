@@ -27,7 +27,7 @@ docker run -v /var/run/docker.sock:/run/docker.sock -it <name_of_image>
 
 3. When you are inside the container, follow the instructions (e.g. enter repo url, your docker hub credentials, etc.).
 
-*NB: For this, I recommend using `https` for cloning git repo.*
+*NB: For this, I recommend using `https` format for cloning git repo. (e.g. https://github.com/ruikawahara/docker-hy.github.io.git)*
 
 **WARNING:** This project is not secure and only used for exercise purpose. 
 
