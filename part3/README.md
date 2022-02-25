@@ -19,7 +19,8 @@ You will learn some useful techniques, such as:
 - Deployment Pipeline
     - Automatic Deployment
     - Intro to CI/CD using GitHub & GitHub Action
-
+- Using Non-Root User
+    - How include user setting in `Dockerfile`
 
 ---
 
