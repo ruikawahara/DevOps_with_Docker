@@ -25,6 +25,10 @@ docker inspect $(docker ps -q) --format '{{.Config.User}} {{.Name}}'
 
 For specific implementation, refer to `Dockerfile` located in `dockerfiles` directory.
 
+I've included `docker-compose.yml` and `nginx.conf` so that you can run the result. If you wish to use my `Dockerfile`, replace `image`  to `build` in `docker-compose.yml` and make proper adjustment for `frontend` and `backend`. 
+
+*NB: You will need to clone `frontend` and `backend` repo if you were to use `build` option.*
+
 ---
 
 ## Output
