@@ -23,6 +23,8 @@ To check the ownership, use following command:
 docker inspect $(docker ps -q) --format '{{.Config.User}} {{.Name}}'
 ```
 
+For specific implementation, refer to `Dockerfile` located in `dockerfiles` directory.
+
 ---
 
 ## Output
