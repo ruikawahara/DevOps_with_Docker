@@ -14,9 +14,9 @@ Explain the modifications you made and submit `docker-compose.yml`.
 
 ### **Modifications**
 1. [Dockerfile in example-frontend](Dockerfiles/frontend): Changed  
-`ENV REACT_APP_BACKEND_URL` to [http://localhost](http://localhost).
+`ENV REACT_APP_BACKEND_URL` to [http://localhost:8080](http://localhost:8080).
 1. [Dockerfile in example-backend](Dockerfiles/backend): Changed `
-ENV REQUEST_ORIGIN` to [http://localhost](http://localhost), moved all environment variables above so that it is executed before `RUN go build` command.
+ENV REQUEST_ORIGIN` to [http://localhost:5000](http://localhost:5000), moved all environment variables above so that it is executed before `RUN go build` command.
 1. `docker-compose.yml`:
     - Environment for `frontend` now has `ENV REACT_APP_BACKEND_URL=http://localhost`. 
     - Environment for `backend` now has `ENV REACT_APP_BACKEND_URL=http://localhost`.
