@@ -14,7 +14,7 @@ COPY . .
 RUN npm install
 
 # ex 1.14 - set env to connect to backend
-ENV REACT_APP_BACKEND_URL=http://localhost
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
 
 # Build static files first
 RUN npm run build

@@ -2,8 +2,8 @@ version: '3.5'
 
 services:
   frontend:
-    # image: frontend-example/ruikawahara
-    build: ../example-frontend
+    image: ruikawahara/frontend-devops-w-docker:latest
+    # build: ../../example-frontend # use this and comment above if you want to use my Dockerfile
     ports:
       - 5000:5000
     environment:
@@ -14,8 +14,8 @@ services:
       - redis
 
   backend:
-    # image: backend-example/ruikawahara
-    build: ../example-backend
+    image: ruikawahara/backend-devops-w-docker
+    # build: ../../example-backend # use this and comment above if you want to use my Dockerfile
     ports:
       - 8080:8080
     environment:
