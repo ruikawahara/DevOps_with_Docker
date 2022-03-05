@@ -21,6 +21,7 @@ You will learn some useful techniques, such as:
     - Intro to CI/CD using GitHub & GitHub Action
 - Using Non-Root User
     - How include user setting in `Dockerfile`
+- Optimizing the Image Size
 
 ---
 
