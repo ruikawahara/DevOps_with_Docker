@@ -108,6 +108,9 @@ USER userapp
 ENTRYPOINT [ "/usr/src/app/server" ]
 ```
 
+### Running the Result
+I've included `docker-compose.yml` and `ngingx.conf` file in this directory so that you can run them to see its result. If you wish to run by building frontend & backend locally, you must clone [frontend](https://github.com/docker-hy/material-applications/tree/main/example-frontend) and [backend](https://github.com/docker-hy/material-applications/tree/main/example-backend) first. Then add the Dockerfiles with above solutions into the directories you just cloned. You will also need to modify the `docker-compose.yml` as well.
+
 ---
 
 ## Output
