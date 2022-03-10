@@ -20,7 +20,7 @@ Following are the new implementation of optimized images:
 
 ### **Frontend**
 ```Dockerfile
-# Use node to build and store build assets
+# Use node to build
 FROM node:14 as build-stage
 
 WORKDIR /usr/src/app
@@ -31,12 +31,14 @@ RUN npm install && \
     npm run build 
 
 
+# Use alpine for minimal size container
 FROM alpine:latest
 
 EXPOSE 5000
 
 WORKDIR /usr/src/app
 
+# copy /build directory from node container to alpine container
 COPY --from=build-stage /usr/src/app/build  ./build
 
 ENV REACT_APP_BACKEND_URL=http://localhost:8080
