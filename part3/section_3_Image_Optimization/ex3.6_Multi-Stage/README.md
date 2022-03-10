@@ -28,10 +28,13 @@ Following are the new implementation of optimized images:
 # Use node to build
 FROM node:14 as build-stage
 
+# Define workspace
 WORKDIR /usr/src/app
 
+# Copy conents of 'example-frontend' in build-stage
 COPY . .
 
+# Install npm and build; generates ./build
 RUN npm install && \
     npm run build 
 
@@ -39,22 +42,28 @@ RUN npm install && \
 # Use alpine for minimal size container
 FROM alpine:latest
 
+# Set port to 5000
 EXPOSE 5000
 
+# Define workspace
 WORKDIR /usr/src/app
 
-# copy /build directory from node container to alpine container
+# Copy /build directory from node container to alpine container
 COPY --from=build-stage /usr/src/app/build  ./build
 
+# Set environment variable
 ENV REACT_APP_BACKEND_URL=http://localhost:8080
 
+# Add npm, install serve, add user setting
 RUN apk add --no-cache npm && \
     npm install -g serve && \
     adduser -D userapp && \
     chown -R userapp .
 
+# Activate non-root user
 USER userapp
 
+# Activate frontend
 CMD ["serve", "-s", "-l", "5000", "build"]
 ```
 
@@ -66,12 +75,13 @@ FROM golang:1.16-alpine as build-stage
 # Choose working directory
 WORKDIR /usr/src/app
 
-# # Copy contents of 'example-backend' in container. 
+# Copy contents of 'example-backend' in container. 
 COPY . .
 
-# Build go (based on simple-web-server example)
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
-
+# Build go (based on simple-web-server example) & add user
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build && \
+    adduser -D userapp && \
+    chown -R userapp .
 
 FROM scratch
 
@@ -82,26 +92,32 @@ EXPOSE 8080
 ENV REQUEST_ORIGIN=http://localhost:5000 \
     REDIS_HOST=redis
 
+# Copy password from build stage to scratch container
+COPY --from=build-stage /etc/passwd /etc/passwd
+
 # Copy built item from build-stage to scratch container
 COPY --from=build-stage /usr/src/app/server /usr/src/app/server
 
+# define workspace
 WORKDIR /usr/src/app/
+
+# activate non-root user
+USER userapp
 
 # Use ENTRYPOINT to activate backend
 ENTRYPOINT [ "/usr/src/app/server" ]
-
 ```
 
 ---
 
 ## Output
 
-<!-- ### *Previous Implementation: (from last exercise)*
-![e3.4.2 - Before Optimization](../../img/e3.4.2.PNG)
+### *Previous Implementation: (from last exercise)*
+![e3.5 - Before Multi-build](../../img/e3.5.PNG)
 
 ### *Current Implementation:*
-![e3.5 - After Optimization](../../img/e3.5.PNG)
+![e3.6 - After Multi-build](../../img/e3.6.PNG)
 
 With alpine variant, we see the following improvements:
-- `Frontend`: 1.18 GB -> 346 MB
-- `Backend`: 1.07 GB -> 447 MB -->
+- `Frontend`: 346 MB -> 95.2 MB
+- `Backend`: 447 MB -> 18 MB
