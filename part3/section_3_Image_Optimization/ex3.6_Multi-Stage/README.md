@@ -12,6 +12,11 @@ Do a multi-stage build for frontend project. You must:
 
 **Part 2 - Backend**
 
+Do a multi-stage build for backend project. You must:
+- Build binary in build stage.
+- Run the binary from `scratch`.
+- Image must be less than 25 MB
+
 ---
 
 ## Solution
@@ -55,6 +60,36 @@ CMD ["serve", "-s", "-l", "5000", "build"]
 
 ### **Backend**
 ```Dockerfile
+# Use alpine golang for build stage
+FROM golang:1.16-alpine as build-stage
+
+# Choose working directory
+WORKDIR /usr/src/app
+
+# # Copy contents of 'example-backend' in container. 
+COPY . .
+
+# Build go (based on simple-web-server example)
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+
+
+FROM scratch
+
+# Set port to 8080
+EXPOSE 8080
+
+# Set environment variable to your localhost. 
+ENV REQUEST_ORIGIN=http://localhost:5000 \
+    REDIS_HOST=redis
+
+# Copy built item from build-stage to scratch container
+COPY --from=build-stage /usr/src/app/server /usr/src/app/server
+
+WORKDIR /usr/src/app/
+
+# Use ENTRYPOINT to activate backend
+ENTRYPOINT [ "/usr/src/app/server" ]
+
 ```
 
 ---
