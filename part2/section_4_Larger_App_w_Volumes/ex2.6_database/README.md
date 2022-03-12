@@ -42,6 +42,8 @@ make
 make clean
 ```
 
+You can check your result at [localhost at port 5000](http://localhost:5000/).
+
 **Note: When you start up `docker-compose`, make sure to wait until backend & database are ready before checking your answer.**
 
 For specific implementation, refer to `docker-compose.yml` located in this directory.

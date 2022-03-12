@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   frontend:
-    image: frontend-example/ruikawahara
+    build: ../../example-frontend
     ports:
       - 5000:5000
     environment:
@@ -13,7 +13,7 @@ services:
       - redis
 
   backend:
-    image: backend-example/ruikawahara
+    build: ../../example-backend
     ports:
       - 8080:8080
     environment:
