@@ -2,7 +2,6 @@ version: '3.5'
 
 services:
     frontend:
-      image: frontend-example/ruikawahara
       build: ../example-frontend
       ports:
         - 5000:5000
@@ -12,7 +11,6 @@ services:
       command: serve -s -l 5000 build
 
     backend:
-      image: backend-example/ruikawahara
       build: ../example-backend
       ports:
         - 8080:8080
