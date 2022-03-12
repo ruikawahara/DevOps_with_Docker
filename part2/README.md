@@ -1,6 +1,6 @@
 # DevOps with Docker Part 2
 
-## [Container Orchestration](https://devopswithdocker.com/part2/)
+## [Container Orchestration](https://devopswithdocker.com/part-2)
 
 ### Overview
 
