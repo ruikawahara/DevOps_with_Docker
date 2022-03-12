@@ -1,6 +1,6 @@
 # DevOps with Docker Part 3
 
-## [Docker in Production](https://devopswithdocker.com/part3/)
+## [Docker in Production](https://devopswithdocker.com/part-3)
 
 ---
 
@@ -22,6 +22,12 @@ You will learn some useful techniques, such as:
 - Using Non-Root User
     - How include user setting in `Dockerfile`
 - Optimizing the Image Size
+    - Gluing same commands
+    - Using Alpine variant
+    - Multi-stage builds
+- Multi-host environments
+    - Docker Swarm & Docker Swarm Mode
+    - Kubernetes
 
 ---
 
